@@ -10,6 +10,7 @@ import time
 import os
 import numpy as np
 import gym
+import gym_furniture
 import logz
 import ray
 import utils
@@ -32,6 +33,7 @@ class Worker(object):
                  delta_std=0.02):
 
         # initialize OpenAI environment for each worker
+        import gym_furniture
         self.env = gym.make(env_name)
         self.env.seed(env_seed)
 
